@@ -83,6 +83,7 @@ li {
     font-size: var(--text-regular);
     padding: 3px;
     margin-right: 50px;
+    border-radius: 8px;
 }
 
 ul {
@@ -150,6 +151,7 @@ button:hover {
 }
 
 .highlighted{
-    -webkit-box-shadow: 8px 0px 13px 7px #FF5020;
-    box-shadow: 8px 0px 13px 7px #FF5020;
+    background-color: deeppink;
+    color: darkred;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49FF18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #cafe;
 }

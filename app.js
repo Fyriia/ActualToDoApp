@@ -4,6 +4,12 @@ function addTodo(newTodo) {
     const todoItem = createTodoItem(newTodo);
     shoppingList$.appendChild(todoItem);
 
+    const childs = document.querySelectorAll('li');
+
+    childs.forEach(child => {
+        child.classList.remove('highlighted');
+        child.classList.remove('filtered');
+    })
 }
 
 // 3. DOM NODE REFERENCES
@@ -100,18 +106,25 @@ shoppingInput$.addEventListener('keyup', event => filterProducts(event));
 
 function filterProducts(){
     console.log("hello");
-    const filterContent = shoppingInput$.textContent;
+    const filterContent = shoppingInput$.value;
     const childs= document.querySelectorAll('li');
     const filteredArray = [];
 
     childs.forEach(child => {
         if (!child.textContent.includes(filterContent)) {
             child.classList.add('filtered');
+            child.classList.remove('highlighted');
         }
-        if (!child.textContent.)
         if (child.textContent.includes(filterContent)){
             child.classList.add('highlighted');
+            child.classList.remove('filtered');
         }
+        if(filterContent === ''){
+            child.classList.remove('highlighted');
+            child.classList.remove('filtered');
+        }
+
+
     }
     )
 }
